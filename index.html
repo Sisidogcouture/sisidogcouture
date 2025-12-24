@@ -9,10 +9,13 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Sisi Dog Couture Logo" class="logo">
-        <div class="lang-switch">
-            <button id="en-btn">EN</button> | <button id="pl-btn">PL</button>
-        </div>
+	  <div class="header-left">
+	     <img src="images/logo.png" alt="Sisi Dog Couture Logo" class="logo">
+	  </div>
+	  <div class="header-right">
+	    <button id="en-btn">EN</button>
+	    <button id="pl-btn">PL</button>
+	  </div>
     </header>
 
     <section id="hero">
@@ -28,21 +31,26 @@
     </section>
 
     <section id="gallery">
-        <h2>Featured Designs / Wybrane projekty</h2>
-        <div class="gallery-grid">
-            <img src="images/img1.jpg" alt="Dog Outfit 1">
-            <img src="images/img2.jpg" alt="Dog Outfit 2">
-            <img src="images/img3.jpg" alt="Dog Outfit 3">
-            <img src="images/img4.jpg" alt="Dog Outfit 4">
-            <img src="images/img5.jpg" alt="Dog Outfit 5">
-            <img src="images/img6.jpg" alt="Dog Outfit 6">
-        </div>
+         <h2>Featured Designs / Wybrane projekty</h2>
+         <div class="gallery-grid">
+           <img src="images/img1.jpg" alt="Dog Outfit 1">
+           <img src="images/img2.jpg" alt="Dog Outfit 2">
+           <img src="images/img3.jpg" alt="Dog Outfit 3">
+           <img src="images/img4.jpg" alt="Dog Outfit 4">
+           <img src="images/img5.jpg" alt="Dog Outfit 5">
+           <img src="images/img6.jpg" alt="Dog Outfit 6">
+         </div>
         <a href="https://www.etsy.com/shop/SisiDogCouture" target="_blank" class="cta-btn">Visit Etsy Shop</a>
     </section>
 
     <section id="contact">
-        <h2>Contact / Kontakt</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <h2>Contact / Kontakt</h2>
+      <form action="https://formspree.io/f/mnqlbqke" method="POST">
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
         <p>Instagram: <a href="https://www.instagram.com/yourinstagram" target="_blank">@yourinstagram</a></p>
     </section>
 
@@ -78,4 +86,5 @@
     </script>
 </body>
 </html>
+
 
