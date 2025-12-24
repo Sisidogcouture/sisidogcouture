@@ -87,6 +87,28 @@ section {
     max-width: 1000px;
     margin: auto;
 }
+
+.hero-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff5c30;
+}
+
+
 /* =========================
    GALLERY
 ========================= */
