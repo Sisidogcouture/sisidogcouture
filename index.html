@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisi Dog Couture | Handmade Dog Clothing & Accessories</title>
+    <meta name="description" content="Handmade dog clothing and accessories. Unique designs crafted with love. Shop Sisi Dog Couture on Etsy.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Sisi Dog Couture Logo" class="logo">
+        <div class="lang-switch">
+            <button id="en-btn">EN</button> | <button id="pl-btn">PL</button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1 id="hero-title">Handmade clothing and accessories for pets</h1>
+        <p id="hero-desc">Crafted with love, attention to detail and comfort for your pet.</p>
+        <a href="https://www.etsy.com/shop/SisiDogCouture" target="_blank" class="cta-btn">Shop on Etsy</a>
+    </section>
+
+    <section id="about">
+        <h2>About / O marce</h2>
+        <p id="about-en">Sisi Dog Couture is a small independent brand creating handmade clothing and accessories for pets. Each piece is crafted from high-quality materials with a focus on comfort, aesthetics, and your pet’s unique personality. I believe in slow fashion, uniqueness, and products made with heart.</p>
+        <p id="about-pl">Sisi Dog Couture to mała, niezależna marka tworząca ręcznie szyte ubrania i akcesoria dla zwierząt. Każdy projekt powstaje z wysokiej jakości materiałów, z myślą o wygodzie, estetyce i indywidualnym charakterze pupila. Wierzę w slow fashion, unikalność i rzeczy tworzone z sercem.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Featured Designs / Wybrane projekty</h2>
+        <div class="gallery-grid">
+            <img src="images/img1.jpg" alt="Dog Outfit 1">
+            <img src="images/img2.jpg" alt="Dog Outfit 2">
+            <img src="images/img3.jpg" alt="Dog Outfit 3">
+        </div>
+        <a href="https://www.etsy.com/shop/SisiDogCouture" target="_blank" class="cta-btn">Visit Etsy Shop</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact / Kontakt</h2>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/yourinstagram" target="_blank">@yourinstagram</a></p>
+    </section>
+
+    <footer>
+        <p>Handmade • Small business • Made with love</p>
+    </footer>
+
+    <script>
+        const enBtn = document.getElementById('en-btn');
+        const plBtn = document.getElementById('pl-btn');
+
+        const aboutEn = document.getElementById('about-en');
+        const aboutPl = document.getElementById('about-pl');
+        const heroTitle = document.getElementById('hero-title');
+        const heroDesc = document.getElementById('hero-desc');
+
+        enBtn.addEventListener('click', () => {
+            aboutEn.style.display = 'block';
+            aboutPl.style.display = 'none';
+            heroTitle.textContent = 'Handmade clothing and accessories for pets';
+            heroDesc.textContent = 'Crafted with love, attention to detail and comfort for your pet.';
+        });
+
+        plBtn.addEventListener('click', () => {
+            aboutEn.style.display = 'none';
+            aboutPl.style.display = 'block';
+            heroTitle.textContent = 'Ręcznie szyte ubrania i akcesoria dla zwierząt';
+            heroDesc.textContent = 'Tworzone z miłością, dbałością o detale i komfort Twojego pupila.';
+        });
+
+        // Domyślny język
+        aboutPl.style.display = 'none';
+    </script>
+</body>
+</html>
