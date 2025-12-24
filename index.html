@@ -118,15 +118,23 @@
     </script>
 	<script>
   	function setLanguage(lang) {
-	    document.querySelectorAll('[data-lang]').forEach(el => {
-    	  el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none';
-    	});
-  	}
-  	// USA-first: domyślnie EN
-  	setLanguage('en');
+  // Wszystkie elementy z data-lang
+	  document.querySelectorAll('[data-lang]').forEach(el => {
+   	 el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none';
+	  });
+
+  // Placeholdery w formularzu
+	  document.querySelectorAll('[data-lang-placeholder-en]').forEach(el => {
+	    el.placeholder = lang === 'en' ? el.dataset.langPlaceholderEn : el.dataset.langPlaceholderPl;
+	  });
+	}
+
+// Domyślnie EN
+	setLanguage('en');
 	</script>
 </body>
 </html>
+
 
 
 
