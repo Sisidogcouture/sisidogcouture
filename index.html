@@ -12,9 +12,9 @@
 	  <div class="header-left">
 	     <img src="images/logo.png" alt="Sisi Dog Couture Logo" class="logo">
 	  </div>
-	  <div class="header-right">
-	    <button id="en-btn">EN</button>
-	    <button id="pl-btn">PL</button>
+	  <div class="header-right lang-switch">
+		  <a href="#" onclick="setLanguage('en')">EN</a>
+  		  <a href="#" onclick="setLanguage('pl')">PL</a>
 	  </div>
     </header>
 
@@ -25,13 +25,19 @@
     </section>
 
     <section id="about">
-        <h2>About / O marce</h2>
+        <h2>
+            <span data-lang="en">About</span>
+  			<span data-lang="pl">O marce</span>
+		</h2>
         <p id="about-en">Sisi Dog Couture is a small independent brand creating handmade clothing and accessories for pets. Each piece is crafted from high-quality materials with a focus on comfort, aesthetics, and your pet’s unique personality. I believe in slow fashion, uniqueness, and products made with heart.</p>
         <p id="about-pl">Sisi Dog Couture to mała, niezależna marka tworząca ręcznie szyte ubrania i akcesoria dla zwierząt. Każdy projekt powstaje z wysokiej jakości materiałów, z myślą o wygodzie, estetyce i indywidualnym charakterze pupila. Wierzę w slow fashion, unikalność i rzeczy tworzone z sercem.</p>
     </section>
 
     <section id="gallery">
-         <h2>Featured Designs / Wybrane projekty</h2>
+         <h2>
+  			<span data-lang="en">Featured Designs</span>
+  			<span data-lang="pl">Wybrane projekty</span>
+		 </h2>
          <div class="gallery-grid">
            <img src="images/img1.jpg" alt="Dog Outfit 1">
            <img src="images/img2.jpg" alt="Dog Outfit 2">
@@ -44,7 +50,10 @@
     </section>
 
     <section id="contact">
-      <h2>Contact / Kontakt</h2>
+	      <h2>
+	  		<span data-lang="en">Contact</span>
+  			<span data-lang="pl">Kontakt</span>
+		  </h2>
       <form action="https://formspree.io/f/mnqlbqke" method="POST">
         <input type="email" name="email" placeholder="Your email" required>
         <input type="text" name="subject" placeholder="Subject" required>
@@ -84,8 +93,18 @@
         // Domyślny język
         aboutPl.style.display = 'none';
     </script>
+	<script>
+  	function setLanguage(lang) {
+	    document.querySelectorAll('[data-lang]').forEach(el => {
+    	  el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none';
+    	});
+  	}
+  	// USA-first: domyślnie EN
+  	setLanguage('en');
+	</script>
 </body>
 </html>
+
 
 
 
