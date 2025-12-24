@@ -212,6 +212,24 @@ section {
 }
 
 /* =========================
+   SOCIAL
+========================= */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-buttons a {
+  padding: 12px 24px;
+  border-radius: 25px;
+  background: #ff7f50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
