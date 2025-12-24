@@ -342,4 +342,10 @@ section {
     text-align: center;
   }
 }
+/* =========================
+   FASHION SPACING
+========================= */
 
+section {
+  margin-bottom: 80px;
+}
