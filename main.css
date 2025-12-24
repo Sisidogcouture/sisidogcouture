@@ -141,51 +141,31 @@ section {
 /* =========================
    CONTACT FORM
 ========================= */
-.contact {
-  max-width: 600px;
-  margin: 0 auto 100px;
-}
-
-.contact h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.contact form {
+#contact form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  max-width: 500px;
+  margin: auto;
+  gap: 15px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  font-family: inherit;
+#contact input, #contact textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.contact textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact button {
-  background: #222;
+#contact button {
+  padding: 12px;
+  background-color: #ff7f50;
   color: white;
   border: none;
-  padding: 14px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact button:hover {
-  background: #444;
+  font-size: 16px;
 }
 
 /* =========================
