@@ -342,6 +342,18 @@ section {
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+
 /* =========================
    FASHION SPACING
 ========================= */
