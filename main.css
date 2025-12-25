@@ -30,35 +30,33 @@ h2 {
 /* =========================
    HEADER
 ========================= */
-header {
-  background: #ffffff;
-  padding: 20px 40px;
+.site-header {
   display: flex;
-  justify-ent: space-between;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 20px 30px;
 }
 
-.logo img {
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
   height: 60px;
 }
 
-/* Language switch */
-.lang-switch {
-  display: flex;
-  gap: 15px;
-}
-
-.lang-switch a {
-  text-decoration: none;
-  color: #222;
+.lang-switch button {
+  background: none;
+  border: none;
   font-weight: 600;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.lang-switch a:hover {
-  color: #d88f8f;
+  cursor: pointer;
+  padding: 6px 10px;
 }
 
 /* =========================
