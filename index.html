@@ -48,7 +48,7 @@
   <span data-lang="en">Visit our Etsy Shop</span>
   <span data-lang="pl">Odwiedź nasz sklep Etsy</span>
 </a>
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>
             <span data-lang="en">About</span>
   			<span data-lang="pl">O nas</span>
@@ -250,16 +250,17 @@
 
 <!-- ANIMACJE PRZY SCROLLU -->
 <script>
-  const faders = document.querySelectorAll('.fade-in');
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
   const appearOptions = {
-    threshold: 0.1,
+    threshold: 0.2,
     rootMargin: "0px 0px -50px 0px"
   };
 
   const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
+      entry.target.classList.add("visible");
       observer.unobserve(entry.target);
     });
   }, appearOptions);
@@ -267,9 +268,11 @@
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
+});
 </script>
 </body>
 </html>
+
 
 
 
