@@ -329,20 +329,21 @@ section {
   width: 100%;
   box-sizing: border-box;
 }
-
+/*    CONTACT BUTTON  */
 #contact button {
-  display: block;          /* blokowy, łatwiej centrować */
-  width: 100%;             /* zajmuje całą szerokość formularza */
-  max-width: 500px;        /* ograniczenie dla desktopu */
-  margin: 0 auto;          /* centrowanie przy mniejszej szerokości */
-  padding: 14px;
-  background: linear-gradient(135deg, #ff7f50, #ffa07a);
-  color: white;
+  display: inline-block;                /* spójny styl jak inne przyciski */
+  width: 100%;                          /* wypełnia szerokość formularza */
+  max-width: 500px;                     /* ograniczenie dla desktop */
+  margin: 0 auto;                       /* centrowanie */
+  padding: 14px 34px;                    /* taki sam padding jak inne CTA */
+  background: linear-gradient(135deg, #ff7f50, #ffa07a); /* gradient premium */
+  color: #fff;
   font-weight: 600;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 30px;                  /* taki sam jak inne przyciski */
   text-align: center;
+  font-size: 16px;                      /* spójny z innymi przyciskami */
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 /* MOBILE SPECIFIC */
