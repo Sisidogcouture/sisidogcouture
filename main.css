@@ -458,6 +458,7 @@ section {
   outline: none;
 }
 
+/* gdybym chciał taką ramkę w Follow
 .social-section {
   text-align: center;
   padding: 60px 20px;
@@ -468,12 +469,13 @@ section {
     rgba(255,255,255,0) 100%
   );
 }
-/*.social-section {
+*/
+.social-section {
   text-align: center;
   padding: 60px 20px;
   background: transparent;
 }
-*/
+
 .social-section h2 {
   font-size: 32px;
   margin-bottom: 10px;
