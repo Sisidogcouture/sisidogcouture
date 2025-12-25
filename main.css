@@ -270,15 +270,16 @@ section {
   display: inline-block;
   padding: 14px 34px;
   border-radius: 30px;
-  background: #f5b7b1;
+  background: linear-gradient(135deg, #ff7f50, #ffa07a); /* ten sam gradient co globalnie */
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-wrapper .cta-btn:hover {
-  background: #e99b95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255,127,80,0.5);
 }
 
 /* --- TABLET --- */
