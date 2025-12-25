@@ -293,11 +293,11 @@ footer {
 }
 
 @media (max-width: 600px) {
-  header {
+  .site-header {
     flex-direction: column;
     gap: 15px;
   }
-
+}
   .gallery-grid {
     grid-template-columns: 1fr;
   }
