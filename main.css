@@ -177,45 +177,49 @@ section {
 }
 
 
+/* --- GALERIA --- */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* desktop 3 kolumny */
   gap: 20px;
   padding: 20px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
 .gallery-grid img {
   width: 100%;
-  height: 300px; /* stała wysokość dla wszystkich obrazków */
-  object-fit: cover; /* zachowuje proporcje, wypełnia box */
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 300px; /* stała wysokość dla równych proporcji */
+  object-fit: cover; /* zachowuje proporcje, nie rozciąga */
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.03); /* delikatniejsze powiększenie zamiast przesuwania */
+  transform: scale(1.03);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* --- TABLET --- */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: auto; /* pozwala zdjęciom skalować się naturalnie */
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 /*
@@ -295,29 +299,6 @@ footer {
   font-size: 14px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .site-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-}
 /*
 #contact form {
   display: flex;
