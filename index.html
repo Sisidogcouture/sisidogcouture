@@ -83,7 +83,7 @@
   			<span data-lang="en">Featured Designs</span>
   			<span data-lang="pl">Wybrane projekty</span>
 		 </h2>
-         <div class="gallery-grid">
+         <div class="gallery-grid fade-in scale-up">
            <img src="images/img1.jpg" alt="Handmade dog outfit from Sisi Dog Couture">
            <img src="images/img2.jpg" alt="Handmade dog outfit from Sisi Dog Couture">
            <img src="images/img3.jpg" alt="Handmade dog outfit from Sisi Dog Couture">
@@ -105,15 +105,15 @@
 	  		<span data-lang="en">Contact</span>
   			<span data-lang="pl">Kontakt</span>
 		  </h2>
-      <form action="https://formspree.io/f/mnqlbqke" method="POST">
-		  <input type="email" name="email" placeholder="Your email" 
+      <form action="https://formspree.io/f/mnqlbqke" method="POST" class="fade-in contact-form">
+		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
        	  data-lang-placeholder-en="Your email" 
        	  data-lang-placeholder-pl="Twój email" required>
-          <input type="text" name="subject" placeholder="Subject"
+          <input type="text" name="subject" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
        	  data-lang-placeholder-pl="Temat" 
 			 required>
-		  <textarea name="message" placeholder="Message" rows="5"
+		  <textarea name="message" autocomplete="off" placeholder="Message" rows="5"
 		  data-lang-placeholder-en="Message" 
        	  data-lang-placeholder-pl="Wiadomość" 
 			  required></textarea>
@@ -226,8 +226,30 @@
   ]
 }
 </script>
+
+<!-- ANIMACJE PRZY SCROLLU -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 </body>
 </html>
+
 
 
 
