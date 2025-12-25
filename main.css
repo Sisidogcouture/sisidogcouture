@@ -330,17 +330,28 @@ section {
   box-sizing: border-box;
 }
 
-
 #contact button {
-  padding: 12px;
-  background-color: #ff7f50;
+  display: block;          /* blokowy, łatwiej centrować */
+  width: 100%;             /* zajmuje całą szerokość formularza */
+  max-width: 500px;        /* ograniczenie dla desktopu */
+  margin: 0 auto;          /* centrowanie przy mniejszej szerokości */
+  padding: 14px;
+  background: linear-gradient(135deg, #ff7f50, #ffa07a);
   color: white;
+  font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
-
+/* MOBILE SPECIFIC */
+@media (max-width: 600px) {
+  #contact button {
+    font-size: 16px;  /* większy tekst dla mobile */
+    padding: 14px;
+  }
+}
 /* =========================
    SOCIAL
 ========================= */
@@ -370,34 +381,6 @@ footer {
   font-size: 14px;
 }
 
-/*
-#contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
-  gap: 15px;
-}
-
-#contact input, #contact textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#contact button {
-  padding: 12px;
-  background-color: #ff7f50;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-*/
 /* =========================
    SUBTLE PREMIUM ANIMATIONS
 ========================= */
