@@ -450,9 +450,59 @@ section {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* =========================
+   PREMIUM FORM CONTACT
+========================= */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #ff7f50;
   box-shadow: 0 0 0 3px rgba(255,127,80,0.15);
   outline: none;
 }
+
+.social-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: #fff;
+}
+
+.social-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.social-desc {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-btn.etsy {
+  background: #f1641e;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
