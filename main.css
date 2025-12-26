@@ -444,20 +444,11 @@ footer {
     color: #555;
   }
 }
+
 @media (max-width: 600px) {
   #contact input,
   #contact textarea {
     font-size: 16px;
-  }
-}
-
-
-/*dodane*/
-/* Możesz dodać ten kod, by wymusić widoczność na małych ekranach */
-@media (max-width: 600px) {
-  .fade-in {
-    opacity: 1 !important;   /* Zmusi sekcje do bycia widocznymi */
-    transform: translateY(0) !important;  /* Zlikwiduje przesunięcie */
   }
 }
 
@@ -469,14 +460,12 @@ footer {
   background-color: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 #contact input:focus,
 #contact textarea:focus {
   border-color: #ff7f50;
   box-shadow: 0 6px 20px rgba(255,127,80,0.25);
   outline: none;
 }
-
 #contact input:hover,
 #contact textarea:hover {
   border-color: #ffb199;
