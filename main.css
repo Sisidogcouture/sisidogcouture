@@ -2,20 +2,20 @@
 #featured-designs,
 #contact,
 .social-section {
-  background-color: #ffe4e1; /* cała sekcja w tym samym kolorze */
-  width: 100%;               /* pełna szerokość */
+  background-color: #ffe4e1; /* kolor tła */
+  width: 100%;               /* pełna szerokość ekranu */
   padding: 50px 0;           /* góra/dół */
-  font-family: 'Arial', sans-serif;
-  color: #333;
+  box-sizing: border-box;    /* upewniamy się, że padding nie zwiększa szerokości */
 }
 
+/* wrapper dla ograniczenia szerokości treści */
 #about .content-wrapper,
 #featured-designs .content-wrapper,
 #contact .content-wrapper,
 .social-section .content-wrapper {
   max-width: 1000px;
-  margin: auto;
-  padding: 0 20px; /* lewe/prawe marginesy */
+  margin: 0 auto;     /* centrowanie */
+  padding: 0 20px;    /* margines po bokach */
 }
 /* =========================
    RESET & BASE
