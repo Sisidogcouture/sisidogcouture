@@ -1,8 +1,16 @@
 #about,
 #featured-designs,
-#contact,
-.social-section {
- background-color: #ffe4e1;
+#contact {
+  background-color: #ffe4e1;
+  padding: 50px 0; /* góra/dół */
+}
+
+#about .content-wrapper,
+#featured-designs .content-wrapper,
+#contact .content-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px; /* lewy/prawy padding */
 }
 /* =========================
    RESET & BASE
