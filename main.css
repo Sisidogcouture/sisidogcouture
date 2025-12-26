@@ -270,6 +270,11 @@ h2 {
   box-shadow: 0 4px 15px rgba(255,127,80,0.5);
 }
 
+#contact p {
+  margin-bottom: 30px;
+  font-size: 17px;
+  color: #555;
+}
 /* =========================
    SOCIAL
 ========================= */
