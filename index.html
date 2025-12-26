@@ -128,7 +128,7 @@
 		  </p>
       <form action="https://formspree.io/f/mlgedzdn" method="POST" class="fade-in contact-form">
 		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
-       	  data-lang-placeholder-en="Your emaile" 
+       	  data-lang-placeholder-en="Your email" 
        	  data-lang-placeholder-pl="Twój email" required>
           <input type="text" name="subject" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
@@ -298,10 +298,39 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- CZYSCI FORMULARZ MAILOWY I ZAPOBIEGA PRZEKIEROWANIU STRONY -->
+<script>
+	// Funkcja do wysyłania formularza za pomocą Formspree bez przeładowania strony
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Zapobiegaj domyślnemu wysłaniu formularza
 
+    const formData = new FormData(form); // Zbieranie danych z formularza
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Jeśli formularz został wysłany poprawnie, wyczyść formularz i pokaż komunikat
+          form.reset();
+          alert("Dziękujemy za wysłanie wiadomości!");
+        } else {
+          alert("Wystąpił błąd. Proszę spróbować ponownie.");
+        }
+      })
+      .catch(() => {
+        alert("Wystąpił błąd. Proszę spróbować ponownie.");
+      });
+  });
+});
+</script>
 </div>
 </body>
 </html>
+
 
 
 
