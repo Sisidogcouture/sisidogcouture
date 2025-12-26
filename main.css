@@ -451,6 +451,17 @@ footer {
     font-size: 16px;
   }
 }
+
+/*dodane*/
+/* Możesz dodać ten kod, by wymusić widoczność na małych ekranach */
+@media (max-width: 600px) {
+  .fade-in {
+    opacity: 1 !important;   /* Zmusi sekcje do bycia widocznymi */
+    transform: translateY(0) !important;  /* Zlikwiduje przesunięcie */
+  }
+}
+
+
 /* =========================
    CONTACT FORM FOCUS
 ========================= */
