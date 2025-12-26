@@ -473,3 +473,7 @@ footer {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 6px 18px rgba(255,127,80,0.4);
 }
+/*subtelna linia jak w brandach fashion (Céline / Totême)*/
+.site-header {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
