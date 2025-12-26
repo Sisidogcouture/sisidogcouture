@@ -128,7 +128,7 @@
 		  </p>
       <form action="https://formspree.io/f/mlgedzdn" method="POST" class="fade-in contact-form">
 		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
-       	  data-lang-placeholder-en="Your email" 
+       	  data-lang-placeholder-en="Your emailu" 
        	  data-lang-placeholder-pl="Twój email" required>
           <input type="text" name="subject" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
@@ -299,8 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- CZYSCI FORMULARZ MAILOWY I ZAPOBIEGA PRZEKIEROWANIU STRONY -->
 <script>
-	// Funkcja do wysyłania formularza za pomocą Formspree bez przeładowania strony
-document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   
   form.addEventListener("submit", function (event) {
@@ -315,21 +314,28 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         if (response.ok) {
           // Jeśli formularz został wysłany poprawnie, wyczyść formularz i pokaż komunikat
-          form.reset();
+          form.reset(); // Resetowanie formularza
           alert("Dziękujemy za wysłanie wiadomości!");
         } else {
-          alert("Wystąpił błąd. Proszę spróbować ponownie.");
+          // W przypadku błędu w odpowiedzi od Formspree
+          response.text().then(text => {
+            console.error('Błąd odpowiedzi: ', text);
+            alert("Wystąpił błąd. Proszę spróbować ponownie.");
+          });
         }
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('Wystąpił błąd: ', error);
         alert("Wystąpił błąd. Proszę spróbować ponownie.");
       });
   });
 });
+
 </script>
 </div>
 </body>
 </html>
+
 
 
 
