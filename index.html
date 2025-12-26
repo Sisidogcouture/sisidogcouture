@@ -128,7 +128,7 @@
 		  </p>
       <form action="https://formsubmit.co/pbb1975@wp.pl" method="POST">
 		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
-       	  data-lang-placeholder-en="Your email" 
+       	  data-lang-placeholder-en="Your emailik" 
        	  data-lang-placeholder-pl="Twój email" required>
           <input type="text" name="subject" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           // Jeśli formularz został wysłany poprawnie, wyczyść formularz i pokaż komunikat
           form.reset(); // Resetowanie formularza
-          alert("Dziękujemy za wysłanie wiadomości!");
+          alert("Dziękujemy za wysłanie wiadomości tej!");
         } else {
           // Sprawdzamy dokładną odpowiedź serwera
           return response.text().then((text) => {
@@ -334,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </body>
 </html>
+
 
 
 
