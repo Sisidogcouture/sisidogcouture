@@ -336,9 +336,30 @@ h2 {
 footer {
   text-align: center;
   padding: 40px 20px;
-  background: #ffffff;
-  color: #777;
+  background: #fff8f0;  /* spójny z body */
+  color: #555;
   font-size: 14px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ff7f50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff9966;
+}
+
+.footer-links {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.footer-seo {
+  display: none; /* tylko dla Google */
 }
 
 /* =========================
@@ -444,14 +465,12 @@ footer {
     color: #555;
   }
 }
-
 @media (max-width: 600px) {
   #contact input,
   #contact textarea {
     font-size: 16px;
   }
 }
-
 /* =========================
    CONTACT FORM FOCUS
 ========================= */
@@ -460,12 +479,14 @@ footer {
   background-color: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 #contact input:focus,
 #contact textarea:focus {
   border-color: #ff7f50;
   box-shadow: 0 6px 20px rgba(255,127,80,0.25);
   outline: none;
 }
+
 #contact input:hover,
 #contact textarea:hover {
   border-color: #ffb199;
