@@ -126,7 +126,7 @@
   			<span data-lang="en">Have a question or custom request? I’d love to hear from you.</span>
 			<span data-lang="pl">Masz pytanie lub indywidualne zamówienie? Chętnie Cię wysłucham.</span>
 		  </p>
-      <form action="https://formspree.io/f/mdaokyzd" method="POST" class="fade-in contact-form">
+      <form action="https://formspree.io/f/mdaokyzd" method="POST" class="fade-in contact-form" onsubmit="return submitForm()">
 		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
        	  data-lang-placeholder-en="Your email" 
        	  data-lang-placeholder-pl="Twój email" required>
@@ -296,65 +296,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
+<!-- CZYSCI FORMULARZ MAILOWY I ZAPOBIEGA PRZEKIEROWANIU STRONY -->
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Zapobiegaj domyślnemu przekierowaniu
+
+        // Pobranie danych formularza
+        var form = document.querySelector('form');
+        var formData = new FormData(form);
+
+        // Wysłanie danych do Formspree
+        fetch('https://formspree.io/f/mnqlbqke', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Po wysłaniu, wyświetlenie komunikatu sukcesu
+            alert("Thank you for contacting us! We will get back to you shortly.");
+            form.reset(); // Reset formularza
+        })
+        .catch(error => {
+            alert("Something went wrong. Please try again.");
+        });
+    }
+</script>
+	
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
