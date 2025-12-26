@@ -1,16 +1,21 @@
 #about,
 #featured-designs,
-#contact {
-  background-color: #ffe4e1;
-  padding: 50px 0; /* góra/dół */
+#contact,
+.social-section {
+  background-color: #ffe4e1; /* cała sekcja w tym samym kolorze */
+  width: 100%;               /* pełna szerokość */
+  padding: 50px 0;           /* góra/dół */
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 #about .content-wrapper,
 #featured-designs .content-wrapper,
-#contact .content-wrapper {
+#contact .content-wrapper,
+.social-section .content-wrapper {
   max-width: 1000px;
   margin: auto;
-  padding: 0 20px; /* lewy/prawy padding */
+  padding: 0 20px; /* lewe/prawe marginesy */
 }
 /* =========================
    RESET & BASE
