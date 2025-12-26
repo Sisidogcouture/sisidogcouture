@@ -1,3 +1,4 @@
+
 /* =========================
    RESET & BASE
 ========================= */
@@ -268,17 +269,12 @@ h2 {
 #contact button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255,127,80,0.5);
-  letter-spacing: 0.5px;
 }
 
 #contact p {
   margin-bottom: 30px;
   font-size: 17px;
   color: #555;
-}
-#contact ::placeholder {
-  color: #aaa;
-  font-size: 15px;
 }
 /* =========================
    SOCIAL
@@ -445,13 +441,6 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  #contact input,
-  #contact textarea {
-    font-size: 16px;
-  }
-}
-
 /* =========================
    CONTACT FORM FOCUS
 ========================= */
@@ -460,15 +449,12 @@ footer {
   background-color: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-#contact input:focus,
-#contact textarea:focus {
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: #ff7f50;
-  box-shadow: 0 6px 20px rgba(255,127,80,0.25);
+  box-shadow: 0 0 0 3px rgba(255,127,80,0.15);
   outline: none;
-}
-#contact input:hover,
-#contact textarea:hover {
-  border-color: #ffb199;
 }
 /* =========================
    PREMIUM MICRO ANIMATIONS
