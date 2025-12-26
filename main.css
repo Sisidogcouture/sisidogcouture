@@ -338,7 +338,30 @@ footer {
   padding: 40px 20px;
   background: #ffffff;
   color: #777;
+  background: #fff8f0;  /* spójny z body */
+  color: #555;
   font-size: 14px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ff7f50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff9966;
+}
+
+.footer-links {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.footer-seo {
+  display: none; /* tylko dla Google */
 }
 
 /* =========================
