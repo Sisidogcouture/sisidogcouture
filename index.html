@@ -199,32 +199,8 @@
 	</p>
 		</footer>
 
-    <script>
-        const enBtn = document.getElementById('en-btn');
-        const plBtn = document.getElementById('pl-btn');
-
-        const aboutEn = document.getElementById('about-en');
-        const aboutPl = document.getElementById('about-pl');
-        const heroTitle = document.getElementById('hero-title');
-        const heroDesc = document.getElementById('hero-desc');
-
-        enBtn.addEventListener('click', () => {
-            aboutEn.style.display = 'block';
-            aboutPl.style.display = 'none';
-            heroTitle.textContent = 'Handmade clothing and accessories for pets';
-            heroDesc.textContent = 'Crafted with love, attention to detail and comfort for your pet.';
-        });
-
-        plBtn.addEventListener('click', () => {
-            aboutEn.style.display = 'none';
-            aboutPl.style.display = 'block';
-            heroTitle.textContent = 'Ręcznie szyte ubrania i akcesoria dla zwierząt';
-            heroDesc.textContent = 'Tworzone z miłością, dbałością o detale i komfort Twojego pupila.';
-        });
-
-        // Domyślny język
-        aboutPl.style.display = 'none';
-    </script>
+   //tu był skrypt
+	
 	<script>
   	function setLanguage(lang) {
   // Wszystkie elementy z data-lang
@@ -315,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           // Jeśli formularz został wysłany poprawnie, wyczyść formularz i pokaż komunikat
           form.reset(); // Resetowanie formularza
-          alert("Dziękujemy za wysłanie wiadomości tej!");
+          alert("Dziękujemy za wysłanie wiadomości.");
         } else {
           // Sprawdzamy dokładną odpowiedź serwera
           return response.text().then((text) => {
@@ -334,6 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </body>
 </html>
+
 
 
 
