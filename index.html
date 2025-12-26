@@ -299,31 +299,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- CZYSCI FORMULARZ MAILOWY I ZAPOBIEGA PRZEKIEROWANIU STRONY -->
 <script>
-    function submitForm(event) {
-        event.preventDefault(); // Zapobiegaj domyślnemu przekierowaniu
+    // Nasz funkcjonalny kod formularza
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Zatrzymuje wysyłanie formularza i przekierowanie na stronę Formspree
 
-        // Pobranie danych formularza
-        var form = document.querySelector('form');
+        var form = event.target;  // Pobierz formularz, z którego pochodzi wydarzenie
         var formData = new FormData(form);
 
-        // Wysłanie danych do Formspree
         fetch('https://formspree.io/f/mnqlbqke', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            // Po wysłaniu, wyświetlenie komunikatu sukcesu
-            alert("Thank you for contacting us! We will get back to you shortly.");
-            form.reset(); // Reset formularza
+        .then(response => {
+            if (response.ok) {
+                // Jeśli odpowiedź jest ok (status 200), wyświetl komunikat
+                alert("Thank you for contacting us! We will get back to you shortly.");
+                form.reset(); // Zresetowanie formularza po udanym wysłaniu
+            } else {
+                // Jeśli coś poszło nie tak, wyświetl błąd
+                alert("Something went wrong. Please try again.");
+            }
         })
         .catch(error => {
-            alert("Something went wrong. Please try again.");
+            // Obsługuje ewentualne błędy
+            alert("An error occurred while submitting the form. Please try again.");
         });
-    }
+    });
 </script>
 	
 </div>
 </body>
 </html>
+
 
