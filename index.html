@@ -126,9 +126,9 @@
   			<span data-lang="en">Have a question or custom request? I’d love to hear from you.</span>
 			<span data-lang="pl">Masz pytanie lub indywidualne zamówienie? Chętnie Cię wysłucham.</span>
 		  </p>
-      <form id="contact-form" action="https://formspree.io/f/mlgedzdn" method="POST">
+      <form action="https://formspree.io/f/mlgedzdn" method="POST" class="fade-in contact-form">
 		  <input type="email" name="email" autocomplete="email" placeholder="Your email" 
-       	  data-lang-placeholder-en="Your email" 
+       	  data-lang-placeholder-en="Your emaile" 
        	  data-lang-placeholder-pl="Twój email" required>
           <input type="text" name="subject" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
@@ -298,39 +298,11 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- CZYSCI FORMULARZ MAILOWY I ZAPOBIEGA PRZEKIEROWANIU STRONY -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Zatrzymuje domyślną akcję (wysłanie formularza)
 
-        const formData = new FormData(form);  // Pobieranie danych z formularza
-
-        // Wysyłanie formularza do Formspree bez przekierowania
-        fetch('https://formspree.io/f/mlgedzdn', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                // Jeśli odpowiedź jest pozytywna
-                alert("Thank you for contacting us! We will get back to you shortly.");
-                form.reset();  // Resetowanie formularza (czyszczenie pól)
-            } else {
-                alert("Something went wrong. Please try again.");
-            }
-        })
-        .catch(error => {
-            // Obsługa błędów (np. brak połączenia)
-            console.error('Error:', error);
-            alert("An error occurred. Please try again.");
-        });
-    });
-});
-</script>
 </div>
 </body>
 </html>
+
 
 
 
