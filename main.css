@@ -450,6 +450,31 @@ footer {
     font-size: 16px;
   }
 }
+
+/*dodane*/
+@media (max-width: 600px) {
+  body {
+    display: block; /* upewniamy się, że cała zawartość jest widoczna */
+  }
+  .site-header {
+    display: flex; /* zachowanie elastycznego układu */
+  }
+  .site-header .header-left {
+    flex-direction: row; /* może być to potrzebne, jeśli logo i języki się nakładają */
+  }
+  .main-content {
+    display: block;
+  }
+  /* Wymusza wyświetlanie sekcji na mobilnych ekranach */
+  section {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+
+
 /* =========================
    CONTACT FORM FOCUS
 ========================= */
