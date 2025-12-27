@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
         message: form.message.value,
       };
 
-      emailjs.send("service_xquccbo", "template_i17639d", data) // moj SERVICE_ID i TEMPLATE_ID
+      emailjs.send('service_xquccbo', 'template_i17639d', formData) // moj SERVICE_ID i TEMPLATE_ID
         .then(function(response) {
           alert("Your message was sent successfully!");
           form.reset(); // resetuje formularz
@@ -306,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </body>
 </html>
+
 
 
 
