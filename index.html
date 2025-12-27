@@ -128,9 +128,9 @@
 		  </p>
       <form id="contact-form">
 		  <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email" 
-       	  data-lang-placeholder-en="Your emaili" 
+       	  data-lang-placeholder-en="Your email" 
        	  data-lang-placeholder-pl="Twój email" required>
-          <input type="text" id="subject" name="subject" autocomplete="off" placeholder="Subject"
+          <input type="text" id="name" name="name" autocomplete="off" placeholder="Subject"
 		  data-lang-placeholder-en="Subject" 
        	  data-lang-placeholder-pl="Temat" 
 			 required>
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Zbiera dane z formularza
     var formData = {
-      name: document.getElementById('subject').value,
+      name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       message: document.getElementById('message').value
     };
@@ -308,6 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </body>
 </html>
+
 
 
 
