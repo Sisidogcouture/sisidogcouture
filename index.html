@@ -22,8 +22,6 @@
  		 ]
 		}
 	</script>
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
-
 </head>
 <body>
     <header class="site-header">
@@ -280,42 +278,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!--FORMULARZ MAILOWY EmailJS -->
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script type="text/javascript">
-  emailjs.init("4umz6mKayCBeAa4X8");  // <-- Twój publiczny klucz API
+  // Inicjalizacja EmailJS
+  emailjs.init("4umz6mKayCBeAa4X8"); // Twój publiczny klucz API
 
   function sendEmail(event) {
-    event.preventDefault(); // Zapobiega domyślnemu wysyłaniu formularza
+    event.preventDefault(); // blokuje domyślne wysyłanie
 
-    // Pobranie danych z formularza
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-    var time = new Date().toLocaleString(); // Dodanie daty/godziny wysyłki
+    const templateParams = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+      time: new Date().toLocaleString()
+    };
 
-    // Wysłanie e-maila
-    emailjs.send("service_xquccbo", "template_i17639d", {
-        name: name,
-        email: email,
-        message: message,
-        time: time
-    }).then(function(response) {
-        console.log("Message sent successfully!", response);
+    emailjs.send("service_xquccbo", "template_i17639d", templateParams)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
         alert("Message sent successfully!");
-        document.getElementById("contact-form").reset(); // Wyczyść formularz po wysyłce
-    }, function(error) {
-        console.log("Error sending message", error);
+        document.getElementById("contact-form").reset(); // wyczyść formularz
+      }, function(error) {
+        console.log("FAILED...", error);
         alert("Failed to send message. Please try again.");
-    });
+      });
   }
 </script>
-
-
 
 </div>
 </body>
 </html>
+
 
 
 
