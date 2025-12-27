@@ -22,6 +22,7 @@
  		 ]
 		}
 	</script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
 
 </head>
 <body>
@@ -282,13 +283,14 @@ document.addEventListener("DOMContentLoaded", () => {
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
 
 <script type="text/javascript">
-  // Inicjalizuj emailjs z Twoim publicznym kluczem API
+  // Inicjalizujemy emailjs z naszym publicznym kluczem API
   emailjs.init("4umz6mKayCBeAa4X8");  // Twój publiczny API key
 
+  // Słuchaj kliknięcia formularza, aby wysłać wiadomość
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();  // Zapobiegaj domyślnemu wysyłaniu formularza
 
-    // Zbierz dane formularza
+    // Zbierz dane z formularza
     var formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -308,9 +310,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
+	
 </div>
 </body>
 </html>
+
 
 
 
