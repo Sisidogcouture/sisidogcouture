@@ -127,7 +127,7 @@
   			<span data-lang="en">Have a question or custom request? I’d love to hear from you.</span>
 			<span data-lang="pl">Masz pytanie lub indywidualne zamówienie? Chętnie Cię wysłucham.</span>
 		  </p>
-      <form id="contact-form">
+      <form id="contact-form" onsubmit="sendEmail(event)">
 		  <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email" 
        	  data-lang-placeholder-en="Your emailu" 
        	  data-lang-placeholder-pl="Twój email" required>
@@ -282,20 +282,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
 
-
 <script type="text/javascript">
-  emailjs.init("4umz6mKayCBeAa4X8");  // <-- Tutaj wstaw swój publiczny klucz API
+  emailjs.init("4umz6mKayCBeAa4X8");  // <-- Twój publiczny klucz API
 
   function sendEmail(event) {
     event.preventDefault(); // Zapobiega domyślnemu wysyłaniu formularza
-    
-    // Pobranie wartości z formularza
+
+    // Pobranie danych z formularza
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
-    var time = new Date().toLocaleString(); // Dodanie daty i godziny wysłania formularza
-    
-    // Wysłanie e-maila przez EmailJS
+    var time = new Date().toLocaleString(); // Dodanie daty/godziny wysyłki
+
+    // Wysłanie e-maila
     emailjs.send("service_xquccbo", "template_i17639d", {
         name: name,
         email: email,
@@ -304,19 +303,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(function(response) {
         console.log("Message sent successfully!", response);
         alert("Message sent successfully!");
-        document.getElementById("contact-form").reset(); // Wyczyść formularz po wysłaniu
+        document.getElementById("contact-form").reset(); // Wyczyść formularz po wysyłce
     }, function(error) {
-        console.log("Error", error);
+        console.log("Error sending message", error);
         alert("Failed to send message. Please try again.");
     });
   }
 </script>
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
-	
+
+
 </div>
 </body>
 </html>
+
 
 
 
