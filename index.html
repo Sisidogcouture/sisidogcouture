@@ -143,6 +143,18 @@
 		</button>
       </form>
     </section>
+
+<div id="form-success" class="form-message success" aria-live="polite">
+  <span data-lang="en">Thank you! Your message has been sent 🤍</span>
+  <span data-lang="pl">Dziękujemy! Wiadomość została wysłana 🤍</span>
+</div>
+
+<div id="form-error" class="form-message error" aria-live="polite">
+  <span data-lang="en">Something went wrong. Please try again.</span>
+  <span data-lang="pl">Wystąpił błąd. Spróbuj ponownie.</span>
+</div>
+
+	
 <section id="social" class="social-section">
   <h2>
     <span data-lang="en">Follow Sisi Dog Couture</span>
@@ -295,20 +307,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     emailjs.send("service_xquccbo", "template_i17639d", templateParams)
-      .then(function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset(); // wyczyść formularz
-      }, function(error) {
-        console.log("FAILED...", error);
-        alert("Failed to send message. Please try again.");
-      });
+      .then(function () {
+ 	document.getElementById("contact-form").reset(); // wyczyść formularz
+  	document.getElementById("form-error").style.display = "none";
+  	document.getElementById("form-success").style.display = "block";
+
+  	setTimeout(() => {
+    	document.getElementById("form-success").style.display = "none";
+  	}, 6000);
+	})
+	.catch(function () {
+  	document.getElementById("form-success").style.display = "none";
+  	document.getElementById("form-error").style.display = "block";
+	});
   }
 </script>
 
 </div>
 </body>
 </html>
+
 
 
 
