@@ -126,6 +126,7 @@
 			<span data-lang="pl">Masz pytanie lub indywidualne zamówienie? Chętnie Cię wysłucham.</span>
 		  </p>
       <form id="contact-form" onsubmit="sendEmail(event)">
+		  <input type="text" name="company" id="company" autocomplete="off" tabindex="-1" aria-hidden="true" class="sr-only">  
 		  <label for="email" class="sr-only">Email</label>
 		  <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email" 
        	  data-lang-placeholder-en="Your email" 
@@ -301,7 +302,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function sendEmail(event) {
     event.preventDefault(); // blokuje domyślne wysyłanie
-
+	// HONEYPOT – jeśli pole wypełnione, przerywamy
+	if (document.getElementById("company").value !== "") {
+ 	 return; // bot detected
+	}
     const templateParams = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
@@ -329,6 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </body>
 </html>
+
 
 
 
