@@ -561,3 +561,12 @@ footer a:hover {
     transform: translateY(0);
   }
 }
+/* =========================
+MICRO-COPY UX POD FORMULARZEM
+========================= */
+.form-microcopy {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
