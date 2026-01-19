@@ -570,3 +570,77 @@ MICRO-COPY UX POD FORMULARZEM
   color: #777;
   text-align: center;
 }
+
+/* =========================
+   BANNER HEADER
+========================= */
+
+.banner-header {
+  position: relative;
+  height: 320px;             /* wysokość bannera */
+  overflow: hidden;
+}
+
+/* zdjęcie tła */
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/banner.png"); /* <-- tu wstaw swoją grafikę */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.85);  /* lekko przyciemnia dla kontrastu */
+  z-index: 1;
+}
+
+/* warstwa z logo i językami */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+/* delikatny luksusowy overlay gradient */
+.banner-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.05)
+  );
+  z-index: 1;
+}
+
+/* logo większe */
+.logo {
+  height: 85px;
+}
+
+/* języki na jasnym tle */
+.lang-switch a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .banner-header {
+    height: 220px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .banner-content {
+    padding: 18px 20px;
+  }
+}
