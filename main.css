@@ -586,7 +586,7 @@ MICRO-COPY UX POD FORMULARZEM
 .banner-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/banner.jpg"); /* <-- wpisz swoją nazwę pliku */
+  background-image: url("images/banner.png"); /* <-- wpisz swoją nazwę pliku */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
