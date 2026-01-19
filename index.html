@@ -346,25 +346,37 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   
   const bannerBg = document.querySelector(".banner-bg");
+  let scrollTimeout;
 
-  // 1. Slow fade-in przy pierwszym wejściu
+  // Slow fade-in on load
   setTimeout(() => {
     bannerBg.classList.add("loaded");
   }, 100);
 
-  // 2. Delikatny parallax przy scrollu
+  // Parallax + micro blur on scroll
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
-    bannerBg.style.transform = 
+
+    // Parallax
+    bannerBg.style.transform =
       `translateY(${scrolled * 0.15}px) scale(1.05)`;
+
+    // Add soft blur while scrolling
+    bannerBg.style.filter = "blur(3px)";
+
+    // Remove blur after scroll stops
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      bannerBg.style.filter = "blur(0px)";
+    }, 120);
   });
 
 });
 </script>
-
 </div>
 </body>
 </html>
+
 
 
 
