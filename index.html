@@ -342,10 +342,30 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
   }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const bannerBg = document.querySelector(".banner-bg");
+
+  // 1. Slow fade-in przy pierwszym wejściu
+  setTimeout(() => {
+    bannerBg.classList.add("loaded");
+  }, 100);
+
+  // 2. Delikatny parallax przy scrollu
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    bannerBg.style.transform = 
+      `translateY(${scrolled * 0.15}px) scale(1.05)`;
+  });
+
+});
+</script>
 
 </div>
 </body>
 </html>
+
 
 
 
