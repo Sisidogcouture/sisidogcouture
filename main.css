@@ -588,7 +588,7 @@ MICRO-COPY UX POD FORMULARZEM
   background-image: url("images/banner.png"); /* <-- tu wstaw swoją grafikę */
   background-size: cover;
   background-position: center;
-  filter: brightness(1.05);  /* naturalna jasność zdjęcia */
+  filter: brightness(1.25);  /* naturalna jasność zdjęcia */
   z-index: 1;
 }
 
