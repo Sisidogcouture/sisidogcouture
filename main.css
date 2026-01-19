@@ -662,6 +662,12 @@ MICRO-COPY UX POD FORMULARZEM
 
 /* lekki parallax będzie sterowany przez JS */
 
+/* === EXTRA COUTURE MICRO-BLUR === */
+.banner-bg {
+  filter: blur(0px);
+  transition: filter 0.4s ease-out;
+}
+
 
 /* MOBILE */
 @media (max-width: 600px) {
