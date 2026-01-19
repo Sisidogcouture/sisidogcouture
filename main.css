@@ -572,101 +572,86 @@ MICRO-COPY UX POD FORMULARZEM
 }
 
 /* =========================
-   BANNER HEADER
+   BANNER HEADER – PREMIUM
 ========================= */
 
 .banner-header {
   position: relative;
   width: 100%;
-  height: 320px;             /* wysokość bannera */
+  height: 320px;              /* wysokość banera */
   overflow: hidden;
 }
 
-/* zdjęcie tła */
+/* Tło banera */
 .banner-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/banner.png"); /* <-- tu wstaw swoją grafikę */
+  background-image: url("images/banner.jpg"); /* <-- wpisz swoją nazwę pliku */
   background-size: cover;
   background-position: center;
-  object-fit: cover;
-  filter: none;
-  z-index: 1;
-}
-.banner {
-  position: relative;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  filter: none;               /* usuwa wszelkie wcześniejsze przyciemnianie */
 }
 
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.15) 0%,
-    rgba(255,255,255,0.35) 40%,
-    rgba(255,255,255,0.6) 70%,
-    rgba(255,255,255,0.85) 100%
-  );
-  pointer-events: none;
-}
-
-/* warstwa z logo i językami */
-.banner-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 60px;
-}
-/* języki dosunięte do prawej krawędzi */
-.lang-switch {
-  margin-left: auto;
-}
-
-/* delikatny luksusowy overlay gradient */
+/* Jasna półprzezroczysta mgiełka */
 .banner-header::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.05)
+    rgba(255,255,255,0.10) 0%,
+    rgba(255,255,255,0.25) 40%,
+    rgba(255,255,255,0.55) 70%,
+    rgba(255,255,255,0.85) 100%
   );
-  z-index: 1;
-}
-.logo {
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
-}
-/* logo większe */
-.logo {
-  height: 85px;
+  pointer-events: none;
 }
 
-/* języki na jasnym tle */
+/* Zawartość nad banerem */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* Logo większe */
+.logo {
+  height: 85px;   /* ← tu powiększyliśmy logo */
+}
+
+/* Języki po prawej */
 .lang-switch a {
-  color: white;
-  font-weight: 600;
   text-decoration: none;
-  margin-left: 10px;
+  font-weight: 600;
+  color: #222;
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.lang-switch a:hover {
+  background: rgba(255,255,255,0.6);
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
   .banner-header {
-    height: 220px;
-  }
-
-  .logo {
-    height: 60px;
+    height: 240px;
   }
 
   .banner-content {
-    padding: 18px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 70px;
   }
 }
