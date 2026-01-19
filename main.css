@@ -588,7 +588,7 @@ MICRO-COPY UX POD FORMULARZEM
   background-image: url("images/banner.png"); /* <-- tu wstaw swoją grafikę */
   background-size: cover;
   background-position: center;
-  filter: brightness(0.85);  /* lekko przyciemnia dla kontrastu */
+  filter: brightness(1);  /* naturalna jasność zdjęcia */
   z-index: 1;
 }
 
@@ -599,7 +599,11 @@ MICRO-COPY UX POD FORMULARZEM
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 40px;
+  padding: 25px 60px;
+}
+/* języki dosunięte do prawej krawędzi */
+.lang-switch {
+  margin-left: auto;
 }
 
 /* delikatny luksusowy overlay gradient */
@@ -614,7 +618,9 @@ MICRO-COPY UX POD FORMULARZEM
   );
   z-index: 1;
 }
-
+.logo {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
 /* logo większe */
 .logo {
   height: 85px;
