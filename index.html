@@ -346,11 +346,13 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   
   const bannerBg = document.querySelector(".banner-bg");
+  const logo = document.querySelector(".logo");
   let scrollTimeout;
 
   // Slow fade-in on load
   setTimeout(() => {
     bannerBg.classList.add("loaded");
+	logo.classList.add("sweep");
   }, 100);
 
   // Parallax + micro blur on scroll
@@ -376,6 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </body>
 </html>
+
 
 
 
