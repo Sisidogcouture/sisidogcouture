@@ -685,11 +685,12 @@ MICRO-COPY UX POD FORMULARZEM
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.4) 50%,
+    rgba(180,180,180,0.35) 50%,
     transparent 100%
   );
   transform: skewX(-20deg);
   opacity: 0;
+  mix-blend-mode: multiply;
 }
 
 /* animacja sweep */
