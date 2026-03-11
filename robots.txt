@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sisidogcouture.com/sitemap.xml
+Sitemap: https://sisidogcouture.eu/sitemap.xml
