@@ -329,14 +329,23 @@ h2 {
   background: #f1641e;
 }
 
-.social-btn.store {
-  background: #111;
-  color: #fff;
-}
-
 .social-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.social-btn.store {
+  background: transparent;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.25);
+  padding: 10px 18px;
+  border-radius: 999px;
+  transition: 0.2s ease;
+}
+
+.social-btn.store:hover {
+  background: #111;
+  color: #fff;
 }
 
 /* =========================
