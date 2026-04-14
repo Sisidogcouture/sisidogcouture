@@ -329,6 +329,11 @@ h2 {
   background: #f1641e;
 }
 
+.social-btn.store {
+  background: #111;
+  color: #fff;
+}
+
 .social-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
